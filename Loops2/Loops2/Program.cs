@@ -25,7 +25,7 @@ namespace Loops2
                 Console.WriteLine(text);
             }
 
-            //task 2
+            //task 2 - 3
             while (true)
             {
                 Console.WriteLine("Infinite");
@@ -34,7 +34,7 @@ namespace Loops2
             Console.ReadLine();
 
 
-            //task 3
+            //task 4 
             byte j = 0;
             StringBuilder output = new StringBuilder();
             while (j < 100)
@@ -66,7 +66,7 @@ namespace Loops2
             }
 
 
-            //task 4
+            //task 5
             while (1 <= j)
             {
                 output.Remove(Math.Max(j - 2, 0), 1);
@@ -75,7 +75,7 @@ namespace Loops2
                 Thread.Sleep(60);
             }
 
-            //task 5
+            //task 6 - 8
             List<string> names = new List<string> {"Ben", "Bon", "Bo", "Billboye", "Tim?" };
             Console.WriteLine("I have a list of names, try to guess a name...");
             input = Console.ReadLine();
@@ -100,7 +100,7 @@ namespace Loops2
                 }
             }
 
-            //task 6 - 8
+            //task 9 - 10
             List<string> newNames = new List<string> { "John Cena!", "Jorgan", "Bo", "Billboye", "John Cena!" };
             Console.WriteLine("I have a list of names, try to guess a name, this time there are 2 identical names...");
             input = Console.ReadLine();
@@ -125,7 +125,7 @@ namespace Loops2
             }
             Console.ReadLine();
 
-            //task 9 - 10
+            //task 11
             Console.WriteLine("Here comes a list of places, lets see if there are any repeats...");
             Console.ReadLine();
 
