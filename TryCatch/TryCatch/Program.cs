@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TryCatch
 {
@@ -14,18 +10,31 @@ namespace TryCatch
 
             Console.WriteLine("Input a number to be used in several divisions...");
 
-            try
+            bool finishedMath = false;
+            while (!finishedMath)
             {
-                float input = Convert.ToSingle(Console.ReadLine());
+                try
+                {
+                    float input = Convert.ToSingle(Console.ReadLine());
+                    foreach (int numerator in numerators)
+                    {
+                        Console.WriteLine(numerator/input);
+                    }
+                    finishedMath = true;
+                }
+                catch (FormatException ex)
+                {
+                    Console.WriteLine("Please input a number.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);                   
+                }
             }
-            catch(FormatException ex)
-            {
 
-            }
-            catch(Exception ex)
-            {
+            Console.WriteLine("Program outside Try/Catch");
 
-            }
+            Console.ReadLine();
         }
     }
 }
