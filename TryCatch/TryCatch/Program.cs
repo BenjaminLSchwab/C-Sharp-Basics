@@ -16,19 +16,23 @@ namespace TryCatch
                 try
                 {
                     float input = Convert.ToSingle(Console.ReadLine());
-                    foreach (int numerator in numerators)
-                    {
-                        Console.WriteLine(numerator/input);
+
+                    if (input != 0)
+                    {                       
+                        foreach (int numerator in numerators)
+                        {
+                            Console.WriteLine(numerator/input);
+                        }
+                        finishedMath = true;
                     }
-                    finishedMath = true;
+                    else
+                    {
+                        Console.WriteLine("Non-zero number please.");
+                    }
                 }
-                catch (FormatException ex)
+                catch (FormatException)
                 {
                     Console.WriteLine("Please input a number.");
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);                   
                 }
             }
 
