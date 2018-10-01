@@ -6,11 +6,20 @@ using System.Threading.Tasks;
 
 namespace Inheritance
 {
-    public class Employee : Person
+    public class Employee<T> : Person
     {
         public int ID { get; set; }
+        public List<T> Things { get; set; }
 
-        public static bool operator ==(Employee employee1, Employee employee2)
+        public void ListThings()
+        {
+            foreach(T thing in Things)
+            {
+                Console.WriteLine(thing);
+            }
+        }
+
+        public static bool operator ==(Employee<T> employee1, Employee<T> employee2)
         {
             if (employee1.ID == employee2.ID)
             {
@@ -19,7 +28,7 @@ namespace Inheritance
             return false;
         }
 
-        public static bool operator !=(Employee employee1, Employee employee2)
+        public static bool operator !=(Employee<T> employee1, Employee<T> employee2)
         {
             if (employee1.ID != employee2.ID)
             {

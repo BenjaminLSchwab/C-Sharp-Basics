@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Inheritance
 {
@@ -6,14 +7,19 @@ namespace Inheritance
     {
         static void Main()
         {
-            Employee sample = new Employee() { FirstName = "Sample", LastName = "Student", ID = 1 };
+            Employee<String> sample = new Employee<String>() { FirstName = "Sample", LastName = "Student", ID = 1 };
+            sample.Things = new List<string> { "Thing 1", "Thing 2", "Thing Red", "Thing Blue" };
 
-            Employee different = new Employee() { FirstName = "Bob", LastName = "Roberts", ID = 2 };
+            Employee<int> different = new Employee<int>() { FirstName = "Bob", LastName = "Roberts", ID = 2 };
+            different.Things = new List<int> { 1, 2, 77, 45 };
 
             sample.SayName();
-            different.SayName();
+            sample.ListThings();
 
-            Console.WriteLine("Are the two employees the same? {0}.", sample == different);
+            different.SayName();
+            different.ListThings();
+
+            
 
 
             Console.ReadLine();
