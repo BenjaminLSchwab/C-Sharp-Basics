@@ -8,13 +8,13 @@ namespace Inheritance
         {
             Employee sample = new Employee() { FirstName = "Sample", LastName = "Student", ID = 1 };
 
-            Employee different = new Employee() {FirstName = "Bob", LastName = "Roberts", ID = 2 };
+            Employee different = new Employee() { FirstName = "Bob", LastName = "Roberts", ID = 2 };
 
             sample.SayName();
             different.SayName();
 
             Console.WriteLine("Are the two employees the same? {0}.", sample == different);
-            
+
 
             Console.ReadLine();
         }

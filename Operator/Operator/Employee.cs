@@ -10,7 +10,7 @@ namespace Inheritance
     {
         public int ID { get; set; }
 
-        public static bool operator == (Employee employee1, Employee employee2)
+        public static bool operator ==(Employee employee1, Employee employee2)
         {
             if (employee1.ID == employee2.ID)
             {
@@ -29,7 +29,7 @@ namespace Inheritance
         }
 
     }
-    
+
 
     //public static Game operator -(Game game, Player player)
     //{
