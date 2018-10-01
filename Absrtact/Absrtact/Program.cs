@@ -9,6 +9,9 @@ namespace Abstract
             Employee sample = new Employee() {FirstName = "Sample", LastName = "Student" };
             sample.SayName();
 
+            Absrtact.IQuittable quittable = new Employee() {FirstName = "Quitter", LastName = "Jones" };
+            quittable.Quit();
+
             Console.ReadLine();
         }
     }
